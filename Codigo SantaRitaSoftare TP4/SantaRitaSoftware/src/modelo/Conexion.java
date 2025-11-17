@@ -16,13 +16,9 @@ public class Conexion {
     
     public Connection Conectar() {
         try {
-            //Hacemos referencia al driver
-           // Class.forName("com.mysql.jdbc.Driver");  Versión obsoleta
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //3306 ,el puerto por defecto
-            //123456 password de mi phadmin(cuando ya lo tengo), como php no tiene por defecto no ponen nada
-             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/santarita_db", "root", "root");
            
+            Class.forName("com.mysql.cj.jdbc.Driver");            
+             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/santarita_db", "root", "root");           
         } catch (Exception e) {
         }
         return con;
